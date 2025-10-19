@@ -1,0 +1,33 @@
+{
+  "name": "recometry",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^18.18.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "typescript",
+    "npm",
+    "package"
+  ],
+  "author": "Felix Kolawole",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/signalr": "^9.0.6"
+  }
+}
